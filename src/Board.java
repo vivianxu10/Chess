@@ -2,8 +2,8 @@
 
 public class Board {
     public Piece[][] chessBoard = new Piece[8][8]; // Correct initialization of 2D array
-    private int x;
-    private int y;
+    public int x;
+    public int y;
 
     public Board() {
         initializeBoard();
@@ -35,8 +35,7 @@ public class Board {
     }
 
 
-    // haha
-    public void displayBoard() {
+    /*public void displayBoard() {
         System.out.println("+---+---+---+---+---+---+---+---+");
         for (int i = 0; i < 8; i++) {
             System.out.print("|");
@@ -48,13 +47,21 @@ public class Board {
             System.out.println(" " + (8 - i));
             System.out.println("+---+---+---+---+---+---+---+---+");
         }
-        System.out.println("   a  b  c  d  e  f  g  h");
+        System.out.println("   a  b  c  d  e  f  g  h");*/
+
+    public void displayBoard() {
+        System.out.println("   a    b    c   d    e    f   g    h");
+        System.out.println(" +--------------------------------------+");
+        for (int i = 0; i < 8; i++) {
+            System.out.print((8 - i) + "|");
+            for (int j = 0; j < 8; j++) {
+                Piece piece = chessBoard[i][j];
+                String symbol = (piece != null) ? piece.getId() : "  ";
+                System.out.print(" " + symbol + " |");
+            }
+            System.out.println("\n +--------------------------------------+");
+        }
     }
-
-
-
-
-
 
 
 
