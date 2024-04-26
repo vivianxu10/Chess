@@ -35,6 +35,7 @@ public class Board {
     }
 
 
+    // haha
     public void displayBoard() {
         System.out.println("+---+---+---+---+---+---+---+---+");
         for (int i = 0; i < 8; i++) {
